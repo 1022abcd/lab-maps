@@ -1,6 +1,5 @@
 package edu.uw.allencho.maplab;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
@@ -48,10 +47,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
         PolylineOptions rectOptions = new PolylineOptions()
-                .add(new LatLng(47.6533391, -122.3091043), new LatLng(47.655, -122.3078))
-                .width(25)
-                .color(Color.BLUE)
-                .geodesic(true);
+                .add(new LatLng(47.6538, -122.3078))
+                .add(new LatLng(47.6537, -122.3078))
+                .add(new LatLng(47.6538, -122.3077))
+                .add(new LatLng(47.6537, -122.3077))
+                .add(new LatLng(47.6538, -122.3078));
 
 // Get back the mutable Polyline
         Polyline polyline = mMap.addPolyline(rectOptions);
